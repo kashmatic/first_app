@@ -10,10 +10,12 @@ require 'mina/git'
 #   repository   - Git repo to clone from. (needed by mina/git)
 #   branch       - Branch name to deploy. (needed by mina/git)
 
-set :domain, 'foobar.com'
-set :deploy_to, '/var/www/foobar.com'
-set :repository, 'git://...'
+set :domain, 'cas-biodb.cas.unt.edu'
+set :deploy_to, '/var/www/acds/rails'
+set :repository, 'https://github.com/kashmatic/first_app.git'
 set :branch, 'master'
+set :user, 'kvr0011'
+set :ssh_options, '-A'
 
 # Manually create these paths in shared/ (eg: shared/config/database.yml) in your server.
 # They will be linked in the 'deploy:link_shared_paths' step.
